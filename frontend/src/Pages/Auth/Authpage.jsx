@@ -92,7 +92,7 @@ export default function Authpage() {
           </div>
         </div>
       </div>
-
+{/* 
       <div className="h-screen w-full block md:hidden">
         <div className="bg-white mx-auto mt-20 w-5/6 h-5/6 rounded-lg">
           <div className="flex items-center justify-center w-full pt-8">
@@ -135,7 +135,7 @@ export default function Authpage() {
             <div>
               <input type="password" name="" id="password" placeholder="Password" />
             </div>
-          </div>
+          </div> 
           <h1 className="text-sm font-medium text-center mt-5">
             Forgot your Passsword
           </h1>
@@ -143,7 +143,7 @@ export default function Authpage() {
             <button>Sign In</button>
           </div>
         </div>
-      </div>
+      </div>  */}
     </div>
   );
 }
