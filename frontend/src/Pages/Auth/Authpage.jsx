@@ -92,58 +92,8 @@ export default function Authpage() {
           </div>
         </div>
       </div>
-{/* 
-      <div className="h-screen w-full block md:hidden">
-        <div className="bg-white mx-auto mt-20 w-5/6 h-5/6 rounded-lg">
-          <div className="flex items-center justify-center w-full pt-8">
-            <label htmlFor="toggleB" className="flex items-center cursor-pointer">
-              <div className="relative">
-                <input type="checkbox" id="toggleB" className="sr-only" />
-                <div className="block bg-blue-500 w-36 h-10 rounded-full font-bold text-sm pr-2 text-right pt-2.5">
-                  Sign Up
-                </div>
-                <div
-                  className="dot absolute left-1 top-1 bg-white  w-16 h-8 rounded-full 
-                font-bold text-sm flex justify-center items-center transition"
-                >
-                  Sign In
-                </div>
-              </div>
-            </label>
-          </div>
-          <div className="flex flex-col justify-center items-center mt-6 ">
-            <h1 className="font-bold text-xl text-center">Sign In</h1>
-            <div className=" space-x-5 mt-10 mb-5 flex justify-center mx-auto ">
-              <a href=" " className="social text-xl">
-                <SiGithub />
-              </a>
-              <a href=" " className="social text-xl">
-                <FcGoogle />
-              </a>
-              <a href=" " className="social text-xl">
-                <SiLinkedin />
-              </a>
-            </div>
-            <h1 className="text-sm font-medium">Or use your account</h1>
-          </div>
 
-          <div className="mx-8 mt-12 space-y-5">
-            <div>
-              <input type="email" name="" id="email" placeholder="Email" />
-            </div>
 
-            <div>
-              <input type="password" name="" id="password" placeholder="Password" />
-            </div>
-          </div> 
-          <h1 className="text-sm font-medium text-center mt-5">
-            Forgot your Passsword
-          </h1>
-          <div className="flex justify-center mt-8">
-            <button>Sign In</button>
-          </div>
-        </div>
-      </div>  */}
     </div>
   );
 }
