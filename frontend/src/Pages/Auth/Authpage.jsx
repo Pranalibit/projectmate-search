@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "./AuthPage.css";
-import {app} from "../../backend/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import {auth,signInWithEmailAndPassword,registerWithEmailAndPassword,signInWithGoogle} from "../../backend/firebase";
 
-export default function Authpage() {
+const Authpage =()=> {
   const [SignUp, setSignUp] = useState(false);
+  const [name, setName] = useState("");
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
-  const [emailError,setEmailError]=useState('');
-  const [passwordError,setPasswordError]=useState('');
-  const [hasAccount,setHasAccount]=useState('');
+  const [user, loading] = useAuthState(auth);
+  // const history = useHistory();
 
   const SignInClicked = async() => {
     setSignUp(!SignUp);
@@ -20,45 +22,20 @@ export default function Authpage() {
     setSignUp(!SignUp);
   };
 
-  const handleLogin = ()=> {
-    app
-    .auth()
-    .signInWithEmailAndPassword(email,password)
-    .catch((err) =>{
-      switch (err.code) {
-        case "auth/invalid-email":
-        case "auth/user-disabled":
-        case "auth/user-not-found":
-          setEmailError(err.message);
-          break;
-        case "auth/wrong-password":
-          setPasswordError(err.message);
-          break;      
-      }
-    });
+  
 
+  const register = () => {
+    if (!name) alert("Please enter name");
+    registerWithEmailAndPassword(name, email, password);
   };
 
-  const handleSignup = ()=> {
-    app
-    .auth()
-    .createUserWithEmailAndPassword(email,password)
-    .catch((err) =>{
-      switch (err.code) {
-        case "auth/email-already-in-use":
-        case "auth/invalid-email":
-          setEmailError(err.message);
-          break;
-        case "auth/weak-password":
-          setPasswordError(err.message);
-          break;      
-      }
-    });
-
-  };
-
-  const handleLogout =() =>{}
-
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) console.log("ahe");
+  }, [user, loading]);
 
   let classnames = " ";
   if (SignUp) classnames = " right-panel-active ";
@@ -70,28 +47,46 @@ export default function Authpage() {
         id="container"
       >
         <div className="form-container sign-up-container">
-          <form action=" ">
+          <form >
             <h1>Create Account</h1>
             <div className="social-container">
               <a href=" " className="social">
                 <SiGithub />
               </a>
-              <a href=" " className="social">
-                <FcGoogle />
-              </a>
+              
+              <span className="social" onClick={signInWithGoogle}> 
+              <FcGoogle />
+              </span>
+               
+            
               <a href=" " className="social">
                 <SiLinkedin />
               </a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name"/>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign Up</button>
+            <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            />
+            <input 
+            type="text" 
+            placeholder="Email"  
+            value={email}
+            onChange={(e) =>setEmail(e.target.value)}
+            />
+            <input  
+            type="password" 
+            placeholder="Password"  
+            value={password} 
+            onChange={(e) =>setPassword(e.target.value)} 
+            />
+            <button onClick={register}>Sign Up</button>
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form action=" ">
+          <form >
             <h1>Sign in</h1>
             <div className="social-container">
               <a href=" " className="social">
@@ -118,7 +113,7 @@ export default function Authpage() {
             onChange={(e) =>setPassword(e.target.value)}
             />
             <a href=" ">Forgot your password?</a>
-            <button >Sign In</button>
+            <button onClick={() => signInWithEmailAndPassword(email, password)} >Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -155,3 +150,5 @@ export default function Authpage() {
     </div>
   );
 }
+
+export default Authpage;
