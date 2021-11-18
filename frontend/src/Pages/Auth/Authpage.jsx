@@ -20,7 +20,9 @@ const Authpage =()=> {
 
   const SignUpClicked = () => { 
     setSignUp(!SignUp);
-  };  
+  };
+
+  
 
   const register = () => {
     if (!name) alert("Please enter name");
