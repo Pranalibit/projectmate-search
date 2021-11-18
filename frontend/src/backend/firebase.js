@@ -42,10 +42,9 @@ const signInWithGoogle = async () => {
     signInWithPopup(auth,googleProvider).then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-     // eslint-disable-next-line
+     
       const user = result.user;
     }).catch((error) => {
-      // eslint-disable-next-line
       const errorCode = error.code;
       const errorMessage = error.message;  
       const email = error.email;
