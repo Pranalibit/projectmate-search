@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from "react";
 import "./AuthPage.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import { Redirect, Router } from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import {auth,signInWithEmailAndPassword,registerWithEmailAndPassword,signInWithGoogle} from "../../backend/firebase";
@@ -16,6 +16,7 @@ const Authpage =()=> {
 
   const SignInClicked = async() => {
     setSignUp(!SignUp);
+
   };
 
   const SignUpClicked = () => { 
@@ -34,7 +35,13 @@ const Authpage =()=> {
       // maybe trigger a loading screen
       return;
     }
-    if (user) console.log("ahe");
+    if (user) {
+      console.log("ahe");
+      <Router>
+        <Redirect to="/dashboard" /> 
+      </Router>      
+    }
+
   }, [user, loading]);
 
   let classnames = " ";
