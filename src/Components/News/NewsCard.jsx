@@ -16,7 +16,7 @@ const NewsCard = () => {
   //console.log("Data ", data && data[0].image.thumbnail.contentUrl);
 
   return (
-    <div className=" bg-darkshade pb-5 rounded-lg items-start">
+    <div className=" bg-gray-900 pb-5 rounded-lg items-start">
       <h1 className="text-xl ml-4  pt-4 pb-3 font-bold font-Sora">What's Happening</h1>
 
       {data &&
