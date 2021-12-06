@@ -1,17 +1,32 @@
 import { IoSearch } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import { useEffect, useState } from "react";
 
 const SearchBar = () => {
+  const [filteredData, setFilteredData] = useState("");
+
+  useEffect(() => {
+    //searching logic
+  }, [filteredData]);
+
   return (
-    <div class="flex items-center justify-center">
-      <div className="flex justify-center items-center">
+    <div className="">
+      <div className="flex mx-auto relative items-center border-2 px-2 pr-4 rounded-full bg-black opacity-90 lg:ml-40">
         <input
+          className="bg-black rounded-full text-sm border-0 p-4 w-full h-7 outline-none text-white"
           type="text"
-          className=" py-2 w-80 text-white font-medium text-lg "
           placeholder="Search..."
+          value={filteredData}
+          onChange={(event) => setFilteredData(event.target.value)}
         />
-        <button className=" bg-transparent border border-white flex items-center justify-center h-11 px-2 rounded-none  ">
-          <IoSearch className="w-6 h-6"/>
-        </button>
+        {filteredData.length !== 0 && (
+          <IoClose
+            id="clearBtn"
+            onClick={() => setFilteredData("")}
+            className="absolute right-8 cursor-pointer text-white text-xl sm:text-base"
+          />
+        )}
+        <IoSearch className="text-gray-400"/>
       </div>
     </div>
   );

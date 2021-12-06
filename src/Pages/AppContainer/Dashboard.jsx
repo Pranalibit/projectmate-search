@@ -14,30 +14,30 @@ import Connections from "./Connections";
 const Dashboard = () => {
   const details = [
     {
-      userName: "Utkarsh",
-      img: "https://avatars.githubusercontent.com/u/55407062?v=4",
-      datePosted: "1 November",
+      userName: "Pranali Pardeshi",
+      img: "https://avatars.githubusercontent.com/Pranalibit",
+      datePosted: "15 November",
       role: ["UI-UX Designer"],
       desc: "I need a UI-UX designed for my upcoming project who can make good looking professional UI and UX.",
     },
     {
-      userName: "Anurodh Dubey",
-      img: "https://avatars.githubusercontent.com/u/61279576?v=4",
-      datePosted: "5 November",
+      userName: "Rutika Patil",
+      img: "https://avatars.githubusercontent.com/Rutika2001",
+      datePosted: "25 November",
       role: ["Frontend Developer", "Reactjs Developer"],
       desc: "I need a reactjs developer who can build efficient frontend for my website.",
     },
     {
-      userName: "Rahul",
-      img: "https://avatars.githubusercontent.com/u/26406279?v=4",
-      datePosted: "30 October",
+      userName: "Pratiksha Patil",
+      img: "https://avatars.githubusercontent.com/Pratiksha-ui",
+      datePosted: "1 December",
       role: ["Android Developer"],
       desc: "I need a Android developer for my project who can help me in making native android apps.",
     },
     {
-      userName: "Ashutosh",
-      img: "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png",
-      datePosted: "25 October",
+      userName: "Om Chakane",
+      img: "https://avatars.githubusercontent.com/omichan222",
+      datePosted: "5 December",
       role: ["Backend Developer "],
       desc: "I need a Backend Developer for my current project who can make and manage databases and create endpoints for the frontend .",
     },
@@ -61,7 +61,7 @@ const Dashboard = () => {
               <div className="lg:w-2/5 rounded-md">
                
                 {/* create post */}
-                <div className="border-2 border-gray-200 bg-white rounded-sm mb-1 px-3 pt-2">
+                <div className="border-2 border-gray-200 bg-white rounded-sm mb-3 px-3 pt-2">
                   <div className="flex flex-col">
                     <div className="flex flex-row space-x-4 items-center">
                       <img
@@ -127,7 +127,7 @@ const Dashboard = () => {
                           htmlFor="blog"
                         >
                           <img
-                            className="w-2 h-8 mr-2"
+                            className="w-10 h-8 mr-2"
                             src="https://img.icons8.com/fluency/48/000000/image.png"
                             alt="imageicon"
                           />

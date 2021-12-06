@@ -11,7 +11,6 @@ const ProfilePage = () => {
           {/* <!-- Profile Card --> */}
           <div className="bg-white p-3 border-t-4 border-gray-600">
             <div className="image overflow-hidden">
-              
               <img
                 className="h-auto w-full mx-auto"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZkSEm6tkwEyPiz1kmz9BMlcBsbjl8q__XQ&usqp=CAU"
@@ -20,10 +19,10 @@ const ProfilePage = () => {
               />
             </div>
             <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">
-              Mark Bhaiya
+              Lorem Ipsum
             </h1>
             <h3 className="text-gray-600 font-lg font-semibold leading-6">
-              Software Developer
+              Student at Vishwakarma of Technology
             </h3>
             <p className="text-sm font-semibold text-gray-500 hover:text-gray-600 leading-6">
             Life would be much easier if I had the source code.
@@ -167,7 +166,7 @@ const ProfilePage = () => {
               <div className="grid md:grid-cols-2 text-sm ">
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">Full Name</div>
-                  <div className="px-4 py-2">Mark Bhaiya</div>
+                  <div className="px-4 py-2">Lorem ipsum</div>
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">Gender</div>
@@ -180,14 +179,14 @@ const ProfilePage = () => {
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">Address</div>
                   <div className="px-4 py-2">
-                    Arlington Heights, IL, Illinois
+                    Bibweadi, Pune
                   </div>
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">Email.</div>
                   <div className="px-4 py-2">
                     <a className="text-blue-800" href="mailto:jane@example.com">
-                      mark@bhaiya@gmail.com
+                      lorempsum@gmail.com
                     </a>
                   </div>
                 </div>
