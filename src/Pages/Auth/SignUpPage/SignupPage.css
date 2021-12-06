@@ -1,0 +1,22 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+.bgImage {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #061161, #780206);
+}
+
+.side-container {
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #333399,
+    #ff00ccc4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4444b4,
+    #ff00ccc4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
