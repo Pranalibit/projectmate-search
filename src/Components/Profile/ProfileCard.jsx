@@ -2,24 +2,15 @@ import React from "react";
 
 const ProfileCard = () => {
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col justify-center items-center hover:bg-gray-700 bg-darkshade pb-10 rounded-lg">
-=======
     <div className="flex flex-col justify-center items-center hover:bg-gray-700 bg-gray-900 pb-10 rounded-lg ">
->>>>>>> Rbranch
       <div className="bg-blue-700 w-full h-24 rounded-t-lg "></div>
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZkSEm6tkwEyPiz1kmz9BMlcBsbjl8q__XQ&usqp=CAU"
         alt="Profile"
         className="flex w-20 h-20 rounded-full -mt-11"
       />
-<<<<<<< HEAD
-      <p className="text-xl font-semibold">Lorem Ipsum</p>
-      <p>Student at Vishwakarma Institute of Technology</p>
-=======
       <p className="text-xl font-semibold">Mark Bhaiya</p>
       <p>VIT ,Pune</p>
->>>>>>> Rbranch
       <div className="flex flex-row space-x-6 mt-2 ">
         <div className="flex flex-col justify-center items-center">
           <span>0</span>
@@ -31,12 +22,7 @@ const ProfileCard = () => {
         </div>
       </div>
       <p className="text-center text-sm pt-3 px-3 font-Sora">
-<<<<<<< HEAD
-      Life would be much easier if I had the source code.
-      </p>
-=======
       Life would be much easier if I had the source code.      </p>
->>>>>>> Rbranch
       <button
         type="button"
         className="font-Sora text-sm border-2 bg-gradient-to-tr from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 hover:border-2 mt-5 px-3.5 py-1.5 rounded-full"
@@ -47,8 +33,4 @@ const ProfileCard = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ProfileCard;
-=======
-export default ProfileCard;
->>>>>>> Rbranch

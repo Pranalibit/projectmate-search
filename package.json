@@ -1,6 +1,5 @@
 {
-  "homepage": "http://Pranalibit.github.io/projectmate-search",
-  "name": "frontend",
+  "name": "find-simran",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,17 +27,9 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-<<<<<<<< HEAD:package.json
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-========
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
->>>>>>>> Rbranch:frontend/package.json
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -60,13 +51,9 @@
     ]
   },
   "devDependencies": {
-<<<<<<<< HEAD:package.json
     "@types/lodash-es": "^4.17.5",
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
-========
-    "gh-pages": "^3.2.3"
->>>>>>>> Rbranch:frontend/package.json
   }
 }
