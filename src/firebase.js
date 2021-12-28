@@ -4,21 +4,24 @@ import "firebase/compat/auth";
 import "firebase/compat/storage";
 import "firebase/compat/firestore";
 
+// import firebase from "firebase";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCjo3CfXZxSNSV_eqN7nd_XgiCX3dHD_1Q",
-  authDomain: "simran-817a0.firebaseapp.com",
-  databaseURL: "https://simran-817a0-default-rtdb.firebaseio.com",
-  projectId: "simran-817a0",
-  storageBucket: "simran-817a0.appspot.com",
-  messagingSenderId: "374629329621",
-  appId: "1:374629329621:web:95d1cd3912d3b79e60105c"
+   apiKey: "AIzaSyCjo3CfXZxSNSV_eqN7nd_XgiCX3dHD_1Q",
+   authDomain: "simran-817a0.firebaseapp.com",
+   databaseURL: "https://simran-817a0-default-rtdb.firebaseio.com",
+   projectId: "simran-817a0",
+   storageBucket: "simran-817a0.appspot.com",
+   messagingSenderId: "374629329621",
+   appId: "1:374629329621:web:95d1cd3912d3b79e60105c"
+ };
+ 
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+ export const auth = firebase.auth();
+ export const database = {
+  users: db.collection("users"),
 };
-
-firebase.initializeApp(firebaseConfig);
-
-export const auth = firebase.auth();
-
-const firestore = firebase.firestore();
-export const database = {
-  users: firestore.collection("users"),
-};
+ export default db;

@@ -20,7 +20,7 @@ const Contests = () => {
   const columns = [
     {
       name: "Name",
-      selector: (row) => row.name,
+      selector: (row) => row.name/3600,
       sortable: true,
       style: {
         fontSize: "14px",
