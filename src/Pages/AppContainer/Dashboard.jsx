@@ -144,7 +144,7 @@ const Dashboard = () => {
                   </div>
                 </div>
 
-                {details.map((detail, index) => (
+                {/* {details.map((detail, index) => (
                   <Card
                     key={index}
                     userName={detail.userName}
@@ -153,8 +153,9 @@ const Dashboard = () => {
                     roles={detail.role}
                     desc={detail.desc}
                   />
-                ))}
+                ))} */}
               </div>
+              
               {/* right news portion */}
               <div className="top-20 w-1/5 shadow-2xl h-2/3 rounded-md hidden lg:block text-white mb-5">
                 <NewsCard />

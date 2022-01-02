@@ -21,6 +21,7 @@ const firebaseConfig = {
 
 var db = firebase.firestore();
  export const auth = firebase.auth();
+//  console.log(db.auth().currentUser);
  export const database = {
   users: db.collection("users"),
 };

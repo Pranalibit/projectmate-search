@@ -5,6 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { auth } from "../../../firebase";
+import db from "../../../firebase";
 import "./LoginPage.css";
 import Toast from "../../../Components/Toast/Toast";
 import Input from "../../../Components/Input";
@@ -31,6 +32,7 @@ const LoginPage = () => {
     // console.log("User ", email.value, password.value);
     try {
       await auth.signInWithEmailAndPassword(email.value, password.value);
+      console.log(db.auth().currentUser);
       // console.log("logged In");
     } catch (error) {
       // console.log(error.code);
