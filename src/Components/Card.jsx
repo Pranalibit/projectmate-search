@@ -27,10 +27,10 @@ const Card  = ({
       <div className=" w-full lg:max-w-full lg:flex mx-auto">
         <div className="border-r border-b border-l w-full border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between">
           <div className="mb-8 min-w-full">
-            <div className="text-gray-900 font-bold  mb-2">
-              {roles.map((role, index) => (
+            {/* <div className="text-gray-900 font-bold  mb-2">
+              {roles.map((role,index) => (
                 <span
-                  key={index}
+                  // key={index}
                   className={
                     "text-sm mt-1 font-semibold inline-block py-1 px-2 uppercase rounded text-black mr-1 " +
                     "bg-" +
@@ -41,7 +41,7 @@ const Card  = ({
                   {role}
                 </span>
               ))}
-            </div>
+            </div> */}
             <div className="text-gray-700 text-sm font-semibold font-Sora">{desc}</div>
           </div>
           <div className="flex justify-between">
