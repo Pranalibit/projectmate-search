@@ -90,7 +90,10 @@ const Contests = () => {
   ];
 
   return (
+    
     <div className="pt-16 bg-blue-100 min-h-screen md:px-10 lg:px-16 xl:px-20 space-y-7">
+      <br></br>
+      <br></br>
       {/* <div className="sticky top-20 flex justify-around space-x-4 items-center ">
         <div className=" flex mx-auto">
           <div className="flex ">

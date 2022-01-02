@@ -1,16 +1,8 @@
 import { FC, InputHTMLAttributes } from "react";
 
-interface InputFieldProp extends InputHTMLAttributes<HTMLInputElement> {
-  id: string;
-  placeholder: string;
-  error?: string;
-  touched?: boolean;
-  type?: string;
-  className: string;
-  label?: boolean;
-}
 
-const InputField: FC<InputFieldProp> = ({
+
+const InputField = ({
   id,
   placeholder,
   error,

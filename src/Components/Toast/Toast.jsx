@@ -4,13 +4,13 @@ import { Dialog, Transition } from "@headlessui/react";
 import Checked from "../../assets/checked.gif";
 import Warning from "../../assets/warning.gif";
 
-interface ToastTypeProps {
-  type: "Error" | "Success";
-  show: boolean;
-  message: string;
-}
+// interface ToastTypeProps {
+//   type: "Error" | "Success";
+//   show: boolean;
+//   message: string;
+// }
 
-const Toast: FC<ToastTypeProps> = ({ show, message, type }) => {
+const Toast = ({ show, message, type }) => {
   // const history = useHistory();
   const [open, setOpen] = useState(show);
 

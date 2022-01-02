@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const ProfileCard = () => {
   return (
     <div className="flex flex-col justify-center items-center hover:bg-gray-700 bg-gray-900 pb-10 rounded-lg ">
@@ -23,12 +23,14 @@ const ProfileCard = () => {
       </div>
       <p className="text-center text-sm pt-3 px-3 font-Sora">
       Life would be much easier if I had the source code.      </p>
+      <Link to='/profile'>
       <button
         type="button"
         className="font-Sora text-sm border-2 bg-gradient-to-tr from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 hover:border-2 mt-5 px-3.5 py-1.5 rounded-full"
       >
         View Profile
       </button>
+      </Link>
     </div>
   );
 };

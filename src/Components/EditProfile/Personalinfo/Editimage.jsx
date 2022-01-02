@@ -1,6 +1,14 @@
 import "./editimage.css";
-
+import { useState } from 'react';
 const Editimage = () => {
+  const allInputs = { imgUrl: '' }
+  const [imageAsFile, setImageAsFile] = useState('')
+  const [imageAsUrl, setImageAsUrl] = useState(allInputs)
+  console.log(imageAsFile)
+  const handleImageAsFile = (e) => {
+    const image = e.target.files[0]
+    setImageAsFile(imageFile => (image))
+  }
   return (
     <div className="rounded">
       <details>
@@ -22,7 +30,7 @@ const Editimage = () => {
           <label htmlFor="image" className="hello">
             Upload Image...
           </label>
-          <input type="file" id="image" className="imga" />
+          <input type="file" id="image" className="imga" onChange={handleImageAsFile} />
           <a href=" " className="hel">
             Remove photo
           </a>
