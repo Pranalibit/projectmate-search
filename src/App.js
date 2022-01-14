@@ -1,5 +1,3 @@
-
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +10,7 @@ import NotFound from "./Pages/AppContainer/NotFound";
 import { auth } from "./firebase";
 import Authpage from "./Pages/Auth/Authpage";
 import Loader from "./Components/Loader/Loader";
+
 
 function App() {
   const [user, setUser] = useState("");
@@ -62,8 +61,7 @@ function App() {
             ]}
           >
             {user ? <Dashboard /> : <Redirect to="/login" />}
-          </Route>
-
+          </Route>       
           <Route path="/notFound" exact>
             <NotFound />
           </Route>
