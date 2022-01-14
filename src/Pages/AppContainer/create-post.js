@@ -1,5 +1,6 @@
 import db from '../../firebase';
 import {useState} from 'react';
+import { Button, Form, Segment } from 'semantic-ui-react'
 
 const Create_Post = () => {
 	const [userName, SetuserName] = useState("");
@@ -19,6 +20,7 @@ const Create_Post = () => {
             desc: desc
 
 		})
+		
 		.then((docRef) => {
 			alert("Data Successfully Submitted");
 		})
@@ -28,26 +30,27 @@ const Create_Post = () => {
 	}
 
 	return (
-		<div className='container'style={{background:"color:grey"}}>
+		<div className='container box1'>
 			<center>
-				<form style={{marginTop:"200px" ,background:"color:grey"}}
+				<form style={{marginTop:"200px" ,marginRight:"200pax",background:"white"}}
 				onSubmit={(event) => {sub(event)}}>
-					<input type="text" placeholder="your userName"
-					onChange={(e)=>{SetuserName(e.target.value)}} />
+					<input type="text"  className='box' placeholder="UserName"
+					onChange={(e)=>{SetuserName(e.target.value)}} required />
 					<br/><br/>
-					<input type="text" placeholder="date"
-					onChange={(e)=>{SetdatePosted(e.target.value)}}/>
+					<input type="text"  className='box' placeholder="Date"
+					onChange={(e)=>{SetdatePosted(e.target.value)}} required/>
 					<br/><br/>
-					<input type="text" placeholder="desc"
-					onChange={(e)=>{Setdesc(e.target.value)}}/>
+					<input type="textarea"  className='box' placeholder="Project Description"
+					onChange={(e)=>{Setdesc(e.target.value)}} required/>
 					<br/><br/>
-                    <input type="text" placeholder="roles"
-					onChange={(e)=>{Setroles(e.target.value)}}/>
+                    <input type="text" className='box' placeholder="Role You are Looking For!"
+					onChange={(e)=>{Setroles(e.target.value)}} required/>
 					<br/><br/>
-                    <input type="text" placeholder="img"
-					onChange={(e)=>{Setimg(e.target.value)}}/>
+                    <input type="text"  className='box' placeholder="Github"
+					onChange={(e)=>{Setimg(e.target.value)}} required/>
 					<br/><br/>
-					<button type="submit">Submit</button>
+					
+					<button className='btn'type="submit">Post</button>
 				</form>
 			</center>
 		</div>

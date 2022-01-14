@@ -15,3 +15,25 @@
 	width: 100%;
 	height: 21
 }
+.box{
+	background: #e2e8d5;
+	width: 250px;
+	padding: 3px 3px 3px 3px;
+}
+.box1:hover{
+	width: 270px;
+	border-width: 1px;  
+    border-color: black;
+	padding: 3px 3px 3px 3px;
+}
+.btn {
+	background-color: white; 
+	color: black; 
+	border: 2px solid #008CBA;
+	width: 200px;
+}
+  
+  .btn:hover {
+	background-color: #008CBA;
+  	color: white;
+  }

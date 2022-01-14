@@ -4,7 +4,7 @@ import Loader from "../../Components/Loader/Loader";
 import db from '../../firebase';
 import firebase from 'firebase/compat/app';
 import { Switch, Route } from "react-router";
-import Trends from "./Trends";
+
 import ProfileCard from "../../Components/Profile/ProfileCard";
 import NewsCard from "../../Components/News/NewsCard";
 import ProfilePage from "./ProfilePage";
@@ -41,7 +41,10 @@ const Dashboard = () => {
     <Loader />;
   }, []);
   
+  
   return (
+ 
+
     <Switch>
       <>
         <Navbar />
@@ -61,19 +64,10 @@ const Dashboard = () => {
                 <div className="border-2 border-gray-200 bg-white rounded-sm mb-3 px-3 pt-2">
                   <div className="flex flex-col">
                     <div className="flex flex-row space-x-4 items-center">
-                      <img
-                        className="rounded-full w-14 h-14"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZkSEm6tkwEyPiz1kmz9BMlcBsbjl8q__XQ&usqp=CAU"
-                        alt="User"
-                      />
-                      <input
-                        id="Post"
-                        type="text"
-                        className="outline-none placeholder-gray-600 border-2 w-full max-w-sm rounded-full h-10 sm:h-12 pl-3 bg-gray-300"
-                        placeholder="Create a Post 📝"
-                      />
-                      <Popup trigger={<button className="bg-gray-400 px-3 sm:px-5 py-1 sm:py-2 text-lg sm:text-xl rounded-full">
-                        Post
+                      
+                      <Popup trigger={<button className="outline-none placeholder-gray-600 border-2 w-full max-w-5xl rounded-full h-10 w-10 sm:h-12 pl-4 bg-gray-400"
+                        placeholder="Create a Post 📝">
+                        Create a Post 📝
 
                       </button>}
                       
@@ -84,70 +78,11 @@ const Dashboard = () => {
                     </div>
 
                     <div className="flex flex-row justify-around mt-2">
-                      <div className="flex items-center">
-                        <label
-                          className="flex flex-row px-1 py-1 items-center hover:bg-gray-400 rounded cursor-pointer"
-                          htmlFor="photo"
-                        >
-                          <img
-                            className="w-10 h-8 mr-2"
-                            src="https://img.icons8.com/fluency/48/000000/image.png"
-                            alt="imageicon"
-                          />
-                          Photo
-                        </label>
-                        <input
-                          id="photo"
-                          placeholder=""
-                          type="file"
-                          className="hidden"
-                        />
-                      </div>
-
-                      <div className="flex items-center">
-                        <label
-                          className="flex flex-row px-1 py-1 items-center hover:bg-gray-400 rounded cursor-pointer"
-                          htmlFor="video"
-                        >
-                          <img
-                            className="w-10 h-8 mr-2"
-                            src="https://img.icons8.com/fluency/48/000000/video.png"
-                            alt="videoicon"
-                          />
-                          Video
-                        </label>
-                        <input
-                          id="video"
-                          placeholder=""
-                          type="file"
-                          className="hidden"
-                        />
-                      </div>
-
-                      <div className="flex items-center p-2">
-                        <label
-                          className="flex flex-row px-1 py-1 items-center hover:bg-gray-400 rounded cursor-pointer"
-                          htmlFor="blog"
-                        >
-                          <img
-                            className="w-10 h-8 mr-2"
-                            src="https://img.icons8.com/fluency/48/000000/image.png"
-                            alt="imageicon"
-                          />
-                          Blog
-                        </label>
-                        <input
-                          id="blog"
-                          placeholder=""
-                          type="text"
-                          className="hidden"
-                        />
-                      </div>
+                     
                       
                     </div>
                   </div>
                 </div>
-                
                 {info.map((data) => (
                   
                   <Card
@@ -157,6 +92,7 @@ const Dashboard = () => {
                     img={data.img}
                     roles={data.role}
                     desc={data.desc}
+                 
                   />
                 )
                 )}
@@ -168,9 +104,6 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        </Route>
-        <Route exact path="/trends">
-          <Trends />
         </Route>
         <Route exact path="/connections">
           <Connections />

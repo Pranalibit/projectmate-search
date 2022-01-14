@@ -8,8 +8,8 @@ import SearchBar from "./Searchbar";
 import midPng from "../assets/Group 4.png";
 import logo from "../assets/logo.png";
 import { auth } from "../firebase";
-
-
+import db from "../firebase";
+import firebase from "firebase/compat/app";
 
 const navigation = [
   { name: "Home", href: "/dashboard", current: true },
@@ -24,7 +24,17 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
+  const [git, setgit] = useState("");
+  let user = firebase.auth().currentUser;
 
+  db.collection("personal-info").where('Email_id', '==', user.email).get().then((querySnapshot) => {
+
+    querySnapshot.forEach(element => {
+      var data = element.data();
+     
+      setgit(data.Github);
+    });
+  })
   const linkClicked = (name) => {
     if (name === "connection") setActive("connection");
     else if (name === "contest") setActive("contest");
@@ -106,18 +116,7 @@ const Navbar = () => {
                     >
                       Contests
                     </Link>
-                    <Link
-                      to="/trends"
-                      onClick={() => linkClicked("trend")}
-                      className={classNames(
-                        active === "trend"
-                          ? "bg-purple-900 text-white"
-                          : "text-white hover:bg-gray-700 hover:text-white",
-                        "px-3 py-2 rounded-md text-base font-medium"
-                      )}
-                    >
-                      Trends
-                    </Link>
+                   
                     <SearchBar />
                   </div>
                 </div>
@@ -138,7 +137,7 @@ const Navbar = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZkSEm6tkwEyPiz1kmz9BMlcBsbjl8q__XQ&usqp=CAU"
+                        src={"https://avatars.githubusercontent.com/"+git} 
                         alt=""
                       />
                     </Menu.Button>
